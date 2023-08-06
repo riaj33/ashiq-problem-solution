@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date object</title>
+  </head>
+  <body>
+    <script>
+      // solution no -1
+      function dayOfTheWeek(inputDate) {
+        if (!inputDate) {
+          inputDate = new Date();
+        }
+        let date = new Date(inputDate);
+        let day = date.getDay();
+        return day;
+      }
+
+      console.log(dayOfTheWeek());
+
+      //   solution number 2
+
+      const arraySquareSum = (arrayInput) => {
+        let sum = 0;
+        for (i = 0; i < arrayInput.length; i++) {
+          let square = Math.sqrt(arrayInput[i]);
+          let arrysquareRoot = (sum += square);
+        }
+        let squareRootOfSumArrys = Math.sqrt(sum);
+        return squareRootOfSumArrys;
+      };
+      console.log(arraySquareSum([1, 2, 3, 4]));
+
+      //   Solution number 3
+      const isprimeNumber = (IntegerInput) => {
+        const isPrime = IntegerInput % 2 === 1 ? true : false;
+        return isPrime;
+      };
+      console.log(isprimeNumber(77));
+
+      // Solution number 4 / Window Object
+
+      function openNewWindowWithDimension(url) {
+        window.open(url, "_blank", "width = 800, height = 600");
+      }
+      openNewWindowWithDimension("https://www.example.com");
+    </script>
+  </body>
+</html>
